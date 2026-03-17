@@ -22,11 +22,11 @@ services:
     container_name: database
     environment:
       POSTGRES_USER: mrbean
-      POSTGRES_PASSWORD: 4252642526
+      POSTGRES_PASSWORD: '4252642526'
       POSTGRES_DB: beanscene
       PGDATA: /var/lib/postgresql/data/pgdata
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - ./pgdata:/var/lib/postgresql/data/pgdata
     deploy:

@@ -9,6 +9,11 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-created']
+        verbose_name = 'ссылку'
+        verbose_name_plural = 'ссылки'
+
+    def __str__(self):
+        return self.title
 
 class Vote(models.Model):
     voter = models.ForeignKey(User, on_delete=models.CASCADE)
